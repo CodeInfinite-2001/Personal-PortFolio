@@ -631,25 +631,29 @@ section.active {
     font-size: 0.98rem;
 }
 
+.experience,
 .education {
-    margin-top: 1.75rem;
-    padding-top: 1.5rem;
+    margin-top: 1.5rem;
+    padding-top: 1.25rem;
     border-top: 1px solid var(--glass-border);
 }
 
+.experience h4,
 .education h4 {
     color: var(--accent-red);
-    margin-bottom: 1rem;
+    margin-bottom: 0.85rem;
     display: flex;
     align-items: center;
     gap: 0.5rem;
     font-size: 1.15rem;
 }
 
+.experience ul,
 .education ul {
     list-style: none;
 }
 
+.experience li,
 .education li {
     color: var(--text-light);
     margin-bottom: 0.75rem;
@@ -659,6 +663,7 @@ section.active {
     line-height: 1.5;
 }
 
+.experience li::before,
 .education li::before {
     content: '▸';
     color: var(--accent-red);
@@ -667,6 +672,7 @@ section.active {
     font-weight: bold;
 }
 
+.experience strong,
 .education strong {
     color: var(--text-white);
 }
