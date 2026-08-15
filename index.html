@@ -3,7 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title> Sadeepa Dilshan | Full Stack Developer</title>
+    <title>Sadeepa Dilshan | Full Stack Developer</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
@@ -18,7 +21,7 @@
                 <li><button class="nav-btn" data-section="projects">Projects</button></li>
                 <li><button class="nav-btn" data-section="contact">Contact</button></li>
             </ul>
-            <button class="mobile-menu-btn">
+            <button class="mobile-menu-btn" aria-label="Toggle Navigation Menu">
                 <i class="fas fa-bars"></i>
             </button>
         </div>
@@ -57,7 +60,7 @@
                             <div class="profile-image">
                                 <img src="assest/profile pic.png" 
                                      alt="Sadeepa Dilshan - Full Stack Developer"
-                                     onerror="this.src='https://via.placeholder.com/500x500/333/ff3333?text=A+Johnson'">
+                                     onerror="this.src='https://via.placeholder.com/500x500/222222/ff3333?text=Sadeepa+Dilshan'">
                             </div>
                             <div class="frame-decoration"></div>
                             <div class="status-indicator">
@@ -86,9 +89,9 @@
                             <div class="education">
                                 <h4><i class="fas fa-graduation-cap"></i> Education</h4>
                                 <ul>
-                                    <li><strong>University of Vauniya</strong> - Bachelor of Information Communication Technology (Hons)</li>
-                                    <li><strong>Esoft Metro College</strong> - Diploma in Multimedia </li>
-                                    <li><strong>Advance Level</strong> - Passed (B,C,C)</li>
+                                    <li><strong>University of Vavuniya</strong> - Bachelor of Information Communication Technology (Hons)</li>
+                                    <li><strong>Esoft Metro Campus</strong> - Diploma in Multimedia</li>
+                                    <li><strong>G.C.E. Advanced Level</strong> - Passed (B, C, C)</li>
                                 </ul>
                             </div>
                         </div>
@@ -97,20 +100,20 @@
                             <h3>Professional Highlights</h3>
                             <div class="stats">
                                 <div class="stat-card">
-                                    <div class="stat-number">5</div>
-                                    <div class="stat-label">Projects Completed</div>
+                                    <div class="stat-number">5+</div>
+                                    <div class="stat-label">Projects Built</div>
                                 </div>
                                 <div class="stat-card">
-                                    <div class="stat-number">-</div>
-                                    <div class="stat-label">Happy Clients</div>
+                                    <div class="stat-number">10+</div>
+                                    <div class="stat-label">Tech Stack</div>
                                 </div>
                                 <div class="stat-card">
-                                    <div class="stat-number">-</div>
-                                    <div class="stat-label">Years Experience</div>
+                                    <div class="stat-number">3+</div>
+                                    <div class="stat-label">Years Coding</div>
                                 </div>
                                 <div class="stat-card">
-                                    <div class="stat-number">-</div>
-                                    <div class="stat-label">Code Commits</div>
+                                    <div class="stat-number">100%</div>
+                                    <div class="stat-label">Dedication</div>
                                 </div>
                             </div>
                             
@@ -235,22 +238,22 @@
                     </div>
                     
                     <div class="certifications">
-                        <h3><i class="fas fa-certificate"></i> Certifications</h3>
+                        <h3><i class="fas fa-certificate"></i> Certifications & Learning</h3>
                         <div class="certs-grid">
                             <div class="cert-card">
-                                <h4>-</h4>
-                                <p>-</p>
-                                <span class="cert-date">-</span>
+                                <h4>Diploma in Multimedia</h4>
+                                <p>Esoft Metro Campus</p>
+                                <span class="cert-date">Completed</span>
                             </div>
                             <div class="cert-card">
-                                <h4>-</h4>
-                                <p>-</p>
-                                <span class="cert-date">-</span>
+                                <h4>Full Stack Development</h4>
+                                <p>Modern Web & Mobile App Projects</p>
+                                <span class="cert-date">In Progress</span>
                             </div>
                             <div class="cert-card">
-                                <h4>-</h4>
-                                <p>-</p>
-                                <span class="cert-date">-</span>
+                                <h4>UI/UX & Prototyping</h4>
+                                <p>Figma & Design Systems</p>
+                                <span class="cert-date">Ongoing</span>
                             </div>
                         </div>
                     </div>
@@ -264,80 +267,77 @@
                 
                 <div class="project-filters">
                     <button class="filter-btn active" data-filter="all">All Projects</button>
-                 
+                    <button class="filter-btn" data-filter="web">Web Dev</button>
+                    <button class="filter-btn" data-filter="mobile">Mobile Apps</button>
+                    <button class="filter-btn" data-filter="design">UI/UX Design</button>
                 </div>
                 
                 <div class="projects-grid">
                     <div class="project-card animate-slideInUp" data-category="web">
                         <div class="project-image">
-                            <img src="assest/ams.png" alt="E-Commerce Dashboard">
+                            <img src="assest/ams.png" alt="Agricultural Management System">
                         </div>
                         <div class="project-content">
-                            <h3>AGRO-Agricultural Management System</h3>
-                            <p>A comprehensive agricultural help and management system with crop data handling, farmer support features, and database-driven record management. Built using C++ for core logic and SQL for reliable data storage and operations.</p>
+                            <h3>AGRO - Agricultural Management System</h3>
+                            <p>A comprehensive agricultural help and management system with crop data handling, farmer support features, and database-driven record management. Built using C#/.NET for core logic and SQL for reliable data storage and operations.</p>
                             <div class="project-tags">
-                                <span class="tag">.Net</span>
+                                <span class="tag">.NET</span>
                                 <span class="tag">C#</span>
                                 <span class="tag">SQL</span>
-                               
                             </div>
                             <div class="project-links">
                                 <a href="https://github.com/CodeInfinite-2001/Agricultural-management-system" class="project-link" target="_blank">
                                     <i class="fab fa-github"></i> Code
                                 </a>
-                               
                             </div>
                         </div>
                     </div>
                     
-                    <div class="project-card animate-slideInUp" data-category="web" style="animation-delay: 0.1s;">
+                    <div class="project-card animate-slideInUp" data-category="mobile" style="animation-delay: 0.1s;">
                         <div class="project-image">
-                            <img src="assest/bc.png" alt="Task Management App">
+                            <img src="assest/bc.png" alt="Binance Calculator">
                         </div>
                         <div class="project-content">
-                            <h3>BCal-Binance Calculator</h3>
+                            <h3>BCal - Binance Calculator</h3>
                             <p>A Binance calculator application with real-time price calculations, intuitive mobile interface, and responsive performance. Built using React Native with Expo Go for cross-platform deployment and efficient user experience.</p>
                             <div class="project-tags">
                                 <span class="tag">React Native</span>
-                                <span class="tag">Java Script</span>
-                               
+                                <span class="tag">JavaScript</span>
                             </div>
                             <div class="project-links">
                                 <a href="https://github.com/CodeInfinite-2001/Binance-Calculator" class="project-link" target="_blank">
                                     <i class="fab fa-github"></i> Code
                                 </a>
-                                
                             </div>
                         </div>
                     </div>
                     
-                    <div class="project-card animate-slideInUp" data-category="mobile" style="animation-delay: 0.2s;">
+                    <div class="project-card animate-slideInUp" data-category="web" style="animation-delay: 0.2s;">
                         <div class="project-image">
-                            <img src="assest/mpi.png" alt="Fitness App">
+                            <img src="assest/mpi.png" alt="Mouse Pointer Interactive Web Design">
                         </div>
                         <div class="project-content">
-                            <h3>Mouse Pointer Interactive web design</h3>
+                            <h3>Mouse Pointer Interactive Web Design</h3>
                             <p>A mouse pointer interactive design with smooth hover effects, custom cursor animations, and engaging visual interactions. Built using HTML and CSS to enhance user experience and modern interface behavior.</p>
                             <div class="project-tags">
                                 <span class="tag">HTML</span>
                                 <span class="tag">CSS</span>
-                               
+                                <span class="tag">JavaScript</span>
                             </div>
                             <div class="project-links">
                                 <a href="https://github.com/CodeInfinite-2001/Mouse-pointer-interactive-3D-model-web-design." class="project-link" target="_blank">
                                     <i class="fab fa-github"></i> Code
                                 </a>
-                             
                             </div>
                         </div>
                     </div>
                     
                     <div class="project-card animate-slideInUp" data-category="design" style="animation-delay: 0.3s;">
                         <div class="project-image">
-                            <img src="assest/eaud.png" alt="Banking Dashboard">
+                            <img src="assest/eaud.png" alt="English Learning App UI Design">
                         </div>
                         <div class="project-content">
-                            <h3>English larning App UI Design</h3>
+                            <h3>English Learning App UI Design</h3>
                             <p>An English learning app UI/UX design with intuitive navigation, learner-focused layouts, and engaging visual elements. Built using Figma to enhance usability, accessibility, and an enjoyable learning experience.</p>
                             <div class="project-tags">
                                 <span class="tag">Figma</span>
@@ -349,7 +349,6 @@
                                 <a href="https://www.figma.com/design/iyTmFuKWFG3cUePSPPvkcZ/Untitled?t=QnmhvfO30uRxLyW8-1" class="project-link" target="_blank">
                                     <i class="fab fa-figma"></i> Design File
                                 </a>
-                                
                             </div>
                         </div>
                     </div>
@@ -411,9 +410,9 @@
                                 <a href="https://www.linkedin.com/in/d-h-sadeepa-dilshan-de-silva-77258533a/" target="_blank" aria-label="LinkedIn">
                                     <i class="fab fa-linkedin"></i>
                                 </a>
-                            
+                                <a href="mailto:dilshandesilvasadeepa@gmail.com" aria-label="Email">
+                                    <i class="fas fa-envelope"></i>
                                 </a>
-                                
                             </div>
                         </div>
                     </div>
@@ -468,8 +467,6 @@
                     </a>
                     <a href="https://www.linkedin.com/in/d-h-sadeepa-dilshan-de-silva-77258533a/" target="_blank" aria-label="LinkedIn">
                         <i class="fab fa-linkedin"></i>
-                    </a>
-                   
                     </a>
                     <a href="mailto:dilshandesilvasadeepa@gmail.com" aria-label="Email">
                         <i class="fas fa-envelope"></i>

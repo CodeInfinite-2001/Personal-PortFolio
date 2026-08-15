@@ -114,6 +114,9 @@ function showSection(sectionId) {
         // Trigger animations for the new section
         setTimeout(() => {
             triggerSectionAnimations(sectionId);
+            if (sectionId === 'skills') {
+                animateSkillBars();
+            }
         }, 100);
     }
     
@@ -153,11 +156,21 @@ function toggleMobileMenu() {
 function closeMobileMenu() {
     const navLinks = document.querySelector('.nav-links');
     const menuIcon = document.querySelector('.mobile-menu-btn i');
+    if (!navLinks) return;
     
     navLinks.classList.remove('active');
-    menuIcon.classList.remove('fa-times');
-    menuIcon.classList.add('fa-bars');
+    if (menuIcon) {
+        menuIcon.classList.remove('fa-times');
+        menuIcon.classList.add('fa-bars');
+    }
 }
+
+// Window resize handler
+window.addEventListener('resize', function() {
+    if (window.innerWidth > 768) {
+        closeMobileMenu();
+    }
+});
 
 // Animation functions
 function initAnimations() {
@@ -165,19 +178,10 @@ function initAnimations() {
     const skillObserver = new IntersectionObserver((entries) => {
         entries.forEach(entry => {
             if (entry.isIntersecting) {
-                const skillItems = entry.target.querySelectorAll('.skill-item');
-                skillItems.forEach((item, index) => {
-                    setTimeout(() => {
-                        const progressBar = item.querySelector('.skill-progress');
-                        const width = progressBar.dataset.width;
-                        if (width && !progressBar.style.width) {
-                            progressBar.style.width = width;
-                        }
-                    }, index * 200);
-                });
+                animateSkillBars();
             }
         });
-    }, { threshold: 0.3 });
+    }, { threshold: 0.2 });
     
     const skillsSection = document.getElementById('skills');
     if (skillsSection) {
@@ -196,6 +200,21 @@ function initAnimations() {
     // Observe elements with animate classes
     document.querySelectorAll('.animate-slideInLeft, .animate-slideInRight, .animate-slideInUp').forEach(element => {
         animationObserver.observe(element);
+    });
+}
+
+function animateSkillBars() {
+    const skillsSection = document.getElementById('skills');
+    if (!skillsSection) return;
+    const progressBars = skillsSection.querySelectorAll('.skill-progress');
+    progressBars.forEach((progressBar, index) => {
+        const width = progressBar.dataset.width;
+        if (width) {
+            progressBar.style.width = '0';
+            setTimeout(() => {
+                progressBar.style.width = width;
+            }, 100 + index * 100);
+        }
     });
 }
 
@@ -226,7 +245,7 @@ function triggerSectionAnimations(sectionId) {
 
 // Skill bars initialization
 function initSkillBars() {
-    // This is handled by the Intersection Observer in initAnimations()
+    animateSkillBars();
 }
 
 // Project filtering
