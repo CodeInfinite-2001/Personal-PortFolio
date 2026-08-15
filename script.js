@@ -415,19 +415,22 @@ function showNotification(message, type) {
         style.textContent = `
             .notification {
                 position: fixed;
-                top: 20px;
-                right: 20px;
-                background: var(--medium-grey);
+                top: 24px;
+                right: 24px;
+                background: rgba(20, 20, 26, 0.85);
+                backdrop-filter: blur(16px);
+                -webkit-backdrop-filter: blur(16px);
                 color: white;
                 padding: 1rem 1.5rem;
-                border-radius: 8px;
+                border-radius: 12px;
+                border: 1px solid rgba(255, 255, 255, 0.1);
                 border-left: 4px solid var(--accent-red);
-                box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+                box-shadow: inset 0 1px 1px rgba(255, 255, 255, 0.15), 0 10px 30px rgba(0, 0, 0, 0.5);
                 display: flex;
                 align-items: center;
                 gap: 1rem;
                 transform: translateX(150%);
-                transition: transform 0.3s ease;
+                transition: transform 0.3s cubic-bezier(0.2, 0.8, 0.2, 1);
                 z-index: 9999;
                 max-width: 400px;
             }
@@ -435,7 +438,7 @@ function showNotification(message, type) {
                 transform: translateX(0);
             }
             .notification.success {
-                border-left-color: #00ff00;
+                border-left-color: #00e676;
             }
             .notification.error {
                 border-left-color: var(--accent-red);
@@ -444,7 +447,7 @@ function showNotification(message, type) {
                 font-size: 1.2rem;
             }
             .notification.success i {
-                color: #00ff00;
+                color: #00e676;
             }
             .notification.error i {
                 color: var(--accent-red);
