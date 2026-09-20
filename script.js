@@ -19,6 +19,9 @@ function initPortfolio() {
     
     // Initialize project filtering
     initProjectFilter();
+
+    // Initialize expandable project details
+    initProjectDetails();
     
     // Check URL hash for initial section
     checkInitialHash();
@@ -277,6 +280,27 @@ function initProjectFilter() {
                     }, 300);
                 }
             });
+        });
+    });
+}
+
+function initProjectDetails() {
+    const toggleButtons = document.querySelectorAll('.project-toggle');
+
+    toggleButtons.forEach(button => {
+        button.addEventListener('click', function() {
+            const projectCard = this.closest('.project-card');
+            const details = projectCard.querySelector('.project-details');
+            const isOpen = this.getAttribute('aria-expanded') === 'true';
+
+            this.setAttribute('aria-expanded', String(!isOpen));
+            this.classList.toggle('active', !isOpen);
+            details.hidden = isOpen;
+
+            const chevron = this.querySelector('i');
+            if (chevron) {
+                chevron.style.transform = isOpen ? 'rotate(0deg)' : 'rotate(180deg)';
+            }
         });
     });
 }

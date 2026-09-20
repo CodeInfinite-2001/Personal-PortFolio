@@ -1121,6 +1121,56 @@ section.active {
     box-shadow: 0 6px 20px rgba(255, 51, 51, 0.4);
 }
 
+.project-toggle-wrap {
+    margin-top: 1rem;
+}
+
+.project-toggle {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 0.5rem;
+    padding: 0.7rem 0.9rem;
+    border: 1px solid var(--glass-border);
+    border-radius: 8px;
+    background: rgba(255, 255, 255, 0.03);
+    color: var(--text-white);
+    font-weight: 600;
+    cursor: pointer;
+    transition: var(--transition);
+}
+
+.project-toggle:hover,
+.project-toggle.active {
+    background: rgba(255, 51, 51, 0.12);
+    border-color: rgba(255, 51, 51, 0.45);
+}
+
+.project-toggle i {
+    transition: transform 0.3s ease;
+}
+
+.project-details {
+    margin-top: 0.85rem;
+    padding: 0.9rem 1rem;
+    border: 1px solid var(--glass-border);
+    border-radius: 10px;
+    background: rgba(255, 255, 255, 0.02);
+}
+
+.project-details ul {
+    margin: 0;
+    padding-left: 1.1rem;
+    color: var(--text-grey);
+    line-height: 1.7;
+    font-size: 0.88rem;
+}
+
+.project-details li + li {
+    margin-top: 0.35rem;
+}
+
 .more-projects {
     text-align: center;
     margin-top: 2.5rem;
